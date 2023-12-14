@@ -95,7 +95,7 @@ jobs:
     - name: Tar build files # To prevent file permission loss
       run: tar -cvf ${{ matrix.os }}.tar CLI GUI
     - name: Push generated artifacts for ${{ matrix.os }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.os }}-Build-Files
         path: ${{ matrix.os }}.tar
